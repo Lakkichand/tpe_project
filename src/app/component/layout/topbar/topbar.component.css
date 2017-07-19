@@ -1,0 +1,30 @@
+.tpe-header {
+	background-color: #333848;
+	border-top: 3px solid #F6D63F;
+	min-height: 70px !important;
+	margin-bottom: 0px;
+}
+
+.tpe-header-logo {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.headingContainer {
+	border-left: 1px solid;
+	color: #ffffff;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+.tpe_name{
+    display: inline;
+    color: #E4E5E6;
+}
+
+.tpe_name >.tpe_heading{
+    font-size: 18px;
+    font-weight: bold;
+
+}

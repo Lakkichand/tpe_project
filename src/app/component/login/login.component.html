@@ -1,0 +1,25 @@
+<article class="container login-bg " name="loginForm">
+	<article class=" card card-container col-md-3 col-md-offset-5">
+        <form name="loginForm" autocomplete="off"  novalidate>
+		
+			<article class="col-md-12 col-xs-12 no-padding">
+				<article class="form-group inline-display field_border">
+					<img  class="col-md-2 col-xs-2 login_icon_user no-padding" src="../../../app/assets/images/login/icon_username.png">
+					<input class="col-md-10 col-xs-10 input_text form-control" name="username" type="text"  placeholder="Username" [(ngModel)]="user.username" required>
+				</article>
+				<article class="form-group inline-display field_border">
+					<img class="col-md-2 col-xs-2 login_icon_user no-padding" src="../../../app/assets/images/login/icon_password.png">
+					<input class="col-md-10 col-xs-10 input_text form-control" name="password" type="password"  placeholder="Password" [(ngModel)]="user.password" required/>
+				</article>
+					
+			</article>
+			
+			<article class="col-md-12 col-xs-12 btn-container" >
+				<button  class="col-md-12 btn-login " type="submit" (click)="doLogin()">Login</button>
+                <span class="col-md-12 ">Forgot Password?</span>
+			</article>
+
+		</form>
+          
+    </article>
+</article>
