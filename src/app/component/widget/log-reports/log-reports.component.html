@@ -1,0 +1,16 @@
+<section class="reportDetail-widget" >
+	<p class="col-md-12 col-sm-12 col-xs-12 headerText reportdata-heading">Reports & logs</p>
+	
+	<article *ngFor="let report of reportData" class="col-md-12 col-sm-12 col-xs-12  reportsDetails">
+    <p class="col-md-12 col-sm-12">{{report.time}}</p>
+    <article class="col-md-12 nopadding">
+      <article class="col-md-12 nopadding">
+        <span >{{report.topic}}</span>
+      </article>
+      <article class="col-md-12 nopadding">
+        <span>Reported by: {{report.reporter}}</span>
+        <span> Assets :view</span>
+      </article>
+    </article>
+  </article>
+</section> 

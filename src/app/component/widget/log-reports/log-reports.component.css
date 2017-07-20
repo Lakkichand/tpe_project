@@ -1,0 +1,19 @@
+.driverDetail-widget{
+  height: 100%;
+  
+}
+
+.reportsDetails{
+  height: 100%
+}
+
+.no-padding{
+    padding-left: 0px;
+    padding-right :0px;
+}   
+
+.reportdata-heading{
+    border: 1px solid #ebebeb;
+    padding: 3px 0 3px 10px;
+    font-size: 18px;
+}
