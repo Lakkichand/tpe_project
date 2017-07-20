@@ -1,0 +1,19 @@
+
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sidebarContainer{
+    width: 15%;
+}
+
+.main-section{
+    width: 85%;
+}
+
+.side-main-section{
+    display: inline-flex;
+    position: relative;
+    top: 70px;
+}

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { ResponsiveModule } from 'ng2-responsive'
 
 //main component
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { D3Service } from 'd3-ng2-service';
 import { BarchartComponent } from './component/widget/barchart/barchart.component';
 import { MainComponent } from './component/main/main.component';
 import { LoginComponent } from './component/login/login.component';
+import { InsightPatchComponent } from './component/widget/insight-patch/insight-patch.component';
+import { LogReportsComponent } from './component/widget/log-reports/log-reports.component';
 
 
 
@@ -38,13 +41,16 @@ import { LoginComponent } from './component/login/login.component';
     SidebarComponent,
     BarchartComponent,
     MainComponent,
-    LoginComponent
+    LoginComponent,
+    InsightPatchComponent,
+    LogReportsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ResponsiveModule
   ],
   providers: [
     HttpService,

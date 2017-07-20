@@ -1,0 +1,53 @@
+
+.leftNavContainer {
+	border-radius: 0;
+	height: 100%;
+    background-color: #fff;
+    padding-left: 0px;
+}
+
+.leftNavBGColor {
+	background: #fff;
+}
+
+.leftNavContainer a:hover {
+	font-weight: bold;
+    color:  #00AFD4 !important;
+}
+
+.navbar-nav>li>a {
+	margin-left: 1px;
+	margin-top: -1px;
+	cursor: pointer;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:active, .navbar-nav>li>a:visited{
+    
+    color: #00AFD4 !important;
+    
+}
+
+.leftTabNavName {
+	color: black;
+	font-size:14px;
+    font-weight: 500;
+
+}
+
+
+.navbar-nav>li>a{
+    
+    padding: 15px 0px 8px 0px;
+}
+
+
+.smart_comm_heading{
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+.notificationContainer{
+    margin-top: 50px;
+    padding-left: 10px;
+}

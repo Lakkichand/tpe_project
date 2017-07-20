@@ -8,27 +8,58 @@ import { D3Service, D3, Selection } from 'd3-ng2-service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  private d3: D3; // <-- Define the private member which will hold the d3 reference
-  private parentNativeElement: any;
 
-  constructor(element: ElementRef, d3Service: D3Service) { // <-- pass the D3 Service into the constructor
-    this.d3 = d3Service.getD3(); // <-- obtain the d3 object from the D3 Service
-    this.parentNativeElement = element.nativeElement;
+  insightArray: any[] = [];
+  reportData: any[] = [];
+
+  constructor() {
+    this.insightArray = [{
+      insightHeading: 'Lights',
+      insightValue: '17:44',
+      insightUnit: 'kWh',
+      insightInfo_1: 'peak in past 24hrs ',
+      insightInfo_2: 'peak time 06:30'
+    }, {
+      insightHeading: 'Pool',
+      insightValue: 'Open',
+      insightUnit: 'levels acceptable',
+      insightInfo_1: 'next manual test ',
+      insightInfo_2: 'scheduled 09:45'
+    }, {
+      insightHeading: 'Irrigation',
+      insightValue: '4544',
+      insightUnit: 'gallons (avg per week)',
+      insightInfo_1: '10000sqft of lawn',
+      insightInfo_2: 'avg weekly cost $39'
+
+    }]
+
+
+    this.reportData = [{
+      time: '4 December 22:11',
+      topic: 'BBQ area light flickering',
+      reporter: 'Lucy Stephenson (Appt 48)',
+      assets: 'View'
+    }, {
+      time: '3 December 8:43',
+      topic: 'A lot of leaves in the pool area this morning',
+      reporter: 'Stan Webber (Appt 32A)',
+      assets: 'None'
+    }, {
+      time: '3 December 22:53',
+      topic: 'Broken glass discovered in the parking lot.',
+      reporter: 'Lucy Stephenson (Appt 48)',
+      assets: 'View'
+    }, {
+      time: '1 December 23:56',
+      topic: 'Daily pool report auto-generated. Now available in reports',
+      reporter: 'System Report',
+      assets: 'View'
+    }]
   }
 
   ngOnInit() {
-    let d3 = this.d3; // <-- for convenience use a block scope variable
-    let d3ParentElement: Selection<any, any, any, any>; // <-- Use the Selection interface (very basic here for illustration only)
 
-    // ...
-
-    if (this.parentNativeElement !== null) {
-
-      d3ParentElement = d3.select(this.parentNativeElement); // <-- use the D3 select method 
-
-      // Do more D3 things 
-
-    }
   }
 
 }

@@ -1,3 +1,28 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-fixed-left leftNavContainer">
+  <ul class="nav navbar-nav leftNavBGColor">
+
+    <li *ngFor="let menu of menuList">
+      <a class="col-md-12 nopadding ">
+        <!--<img class="center-block leftNavImages" src="../../../../app/assets/images/leftNav/{{menu.imgName}}.png"
+			/>-->
+        <span class="col-md-12 nopadding text-center leftTabNavName">{{menu.name}}</span>
+      </a>
+    </li>
+    <li class="notificationContainer">
+      <span class="col-md-12 text-center smart_comm_heading">SMART COMMUNITY NOTIFICATION</span>
+      <article class="form-group">
+        <select class="form-control" id="Receipt">
+          <option selected>Select Receipt</option>
+          <option>vinit</option>
+          <option>shekhar</option>
+          <option>aloka</option>
+        </select>
+      </article>
+      <article class="form-group">
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </article>
+      <button type="button" class="btn btn-primary btn-block">Send Message</button>
+    </li>
+
+  </ul>
+</nav>
