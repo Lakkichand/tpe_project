@@ -10,17 +10,16 @@ export class TableComponent implements OnInit {
   public name:string = 'Active Alerts';
   public rows:Array<any> = [];
   public columns:Array<any> = [
-    {title: 'Alert Type', name: 'name', filtering: {filterString: '', placeholder: 'Filter by type'}},
+    {title: 'Alert Type', name: 'alert_type', filtering: {filterString: '', placeholder: 'Filter by type'}},
     {
       title: 'Zone',
-      name: 'position',
+      name: 'zone',
       sort: false,
       filtering: {filterString: '', placeholder: 'Filter by zone'}
     },
-    {title: 'Time Logged', name: 'office', sort: 'asc'},
-    {title: 'Status', name: 'ext', sort: '', filtering: {filterString: '', placeholder: 'Filter by status'}},
-    {title: 'Action', name: 'startDate'},
-    {title: 'Cost ($)', name: 'salary'}
+    {title: 'Time Logged', name: 'time_logged', sort: 'asc'},
+    {title: 'Status', name: 'status', sort: ''},
+    {title: 'Action', name: 'action'}
   ];
   public page:number = 1;
   public itemsPerPage:number = 5;
