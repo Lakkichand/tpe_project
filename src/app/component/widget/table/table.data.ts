@@ -14,54 +14,12 @@ export const TableData:Array<any> = [
     'startDate': '2014/10/08',
     'salary': 114.367
   }, {
-    'name': 'Colette Foley',
-    'position': 'Lorem Inc.',
-    'office': 'Korea, North',
-    'ext': '8968',
-    'startDate': '2015/07/19',
-    'salary': 721.473
-  }, {
     'name': 'Anastasia Shaffer',
     'position': 'Dolor Nulla Semper LLC',
     'office': 'Suriname',
     'ext': '7980',
     'startDate': '2015/04/20',
     'salary': 264.620
-  }, {
-    'name': 'Gabriel Castro',
-    'position': 'Sed Limited',
-    'office': 'Bahrain',
-    'ext': '0757',
-    'startDate': '2015/03/04',
-    'salary': 651.350
-  }, {
-    'name': 'Cherokee Ware',
-    'position': 'Tincidunt LLC',
-    'office': 'United Kingdom (Great Britain)',
-    'ext': '3995',
-    'startDate': '2015/06/17',
-    'salary': 666.259
-  }, {
-    'name': 'Barry Moss',
-    'position': 'Sociis Industries',
-    'office': 'Western Sahara',
-    'ext': '6697',
-    'startDate': '2015/08/13',
-    'salary': 541.631
-  }, {
-    'name': 'Maryam Tucker',
-    'position': 'Elit Pede Malesuada Inc.',
-    'office': 'Brazil',
-    'ext': '5203',
-    'startDate': '2014/10/02',
-    'salary': 182.294
-  }, {
-    'name': 'Constance Clayton',
-    'position': 'Auctor Velit Aliquam LLP',
-    'office': 'United Arab Emirates',
-    'ext': '4204',
-    'startDate': '2015/08/01',
-    'salary': 218.597
   }, {
     'name': 'Rogan Tucker',
     'position': 'Arcu Vestibulum Ante Associates',
@@ -91,26 +49,12 @@ export const TableData:Array<any> = [
     'startDate': '2015/01/12',
     'salary': 62.243
   }, {
-    'name': 'Sharon Campbell',
-    'position': 'Elit Curabitur Sed Consulting',
-    'office': 'Comoros',
-    'ext': '6274',
-    'startDate': '2014/09/14',
-    'salary': 200.854
-  }, {
     'name': 'Yeo Church',
     'position': 'Donec Vitae Erat PC',
     'office': 'Saudi Arabia',
     'ext': '0269',
     'startDate': '2015/06/07',
     'salary': 581.193
-  }, {
-    'name': 'Kylie Barlow',
-    'position': 'Fermentum Risus Corporation',
-    'office': 'Papua New Guinea',
-    'ext': '2010',
-    'startDate': '2014/12/03',
-    'salary': 418.115
   }, {
     'name': 'Nell Leonard',
     'position': 'Vestibulum Consulting',
@@ -133,27 +77,6 @@ export const TableData:Array<any> = [
     'startDate': '2015/05/18',
     'salary': 564.245
   }, {
-    'name': 'Arden Russo',
-    'position': 'Est Tempor Bibendum Corp.',
-    'office': 'Dominican Republic',
-    'ext': '6774',
-    'startDate': '2015/07/23',
-    'salary': 357.222
-  }, {
-    'name': 'Liberty Gallegos',
-    'position': 'Nec Diam LLC',
-    'office': 'Ghana',
-    'ext': '9266',
-    'startDate': '2015/06/18',
-    'salary': 554.375
-  }, {
-    'name': 'Dennis York',
-    'position': 'Nullam Suscipit Foundation',
-    'office': 'Namibia',
-    'ext': '3133',
-    'startDate': '2015/03/20',
-    'salary': 90.417
-  }, {
     'name': 'Petra Chandler',
     'position': 'Pede Nonummy Inc.',
     'office': 'Namibia',
@@ -167,20 +90,6 @@ export const TableData:Array<any> = [
     'ext': '2690',
     'startDate': '2015/08/18',
     'salary': 201.680
-  }, {
-    'name': 'Rose Carter',
-    'position': 'Enim Consequat Purus Industries',
-    'office': 'Morocco',
-    'ext': '0619',
-    'startDate': '2015/03/06',
-    'salary': 220.187
-  }, {
-    'name': 'Denton Atkins',
-    'position': 'Non Vestibulum PC',
-    'office': 'Mali',
-    'ext': '5806',
-    'startDate': '2015/04/19',
-    'salary': 324.588
   }, {
     'name': 'Germaine Osborn',
     'position': 'Tristique Aliquet PC',
@@ -210,34 +119,6 @@ export const TableData:Array<any> = [
     'startDate': '2015/05/16',
     'salary': 401.970
   }, {
-    'name': 'Veronica Allison',
-    'position': 'Aliquet Diam Sed Institute',
-    'office': 'Samoa',
-    'ext': '9966',
-    'startDate': '2015/05/17',
-    'salary': 79.193
-  }, {
-    'name': 'Katelyn Gamble',
-    'position': 'Sed Associates',
-    'office': 'Mauritius',
-    'ext': '4767',
-    'startDate': '2015/03/20',
-    'salary': 484.299
-  }, {
-    'name': 'James Greer',
-    'position': 'A Dui Incorporated',
-    'office': 'Norway',
-    'ext': '5517',
-    'startDate': '2015/02/21',
-    'salary': 333.518
-  }, {
-    'name': 'Cain Vasquez',
-    'position': 'Nulla Facilisis Suspendisse Institute',
-    'office': 'China',
-    'ext': '3179',
-    'startDate': '2015/05/27',
-    'salary': 651.761
-  }, {
     'name': 'Shaeleigh Barr',
     'position': 'Eleifend Cras Institute',
     'office': 'Ghana',
@@ -251,76 +132,6 @@ export const TableData:Array<any> = [
     'ext': '9840',
     'startDate': '2015/01/12',
     'salary': 742.247
-  }, {
-    'name': 'Jayme Pace',
-    'position': 'Cras Eu Tellus Associates',
-    'office': 'Bouvet Island',
-    'ext': '4580',
-    'startDate': '2015/08/12',
-    'salary': 591.588
-  }, {
-    'name': 'Reuben Albert',
-    'position': 'Lobortis Institute',
-    'office': 'Zambia',
-    'ext': '8725',
-    'startDate': '2015/04/04',
-    'salary': 791.408
-  }, {
-    'name': 'Idola Burns',
-    'position': 'Non Industries',
-    'office': 'Myanmar',
-    'ext': '3201',
-    'startDate': '2015/06/24',
-    'salary': 142.906
-  }, {
-    'name': 'Laura Macias',
-    'position': 'Phasellus Inc.',
-    'office': 'Mauritania',
-    'ext': '2033',
-    'startDate': '2014/11/21',
-    'salary': 226.591
-  }, {
-    'name': 'Nichole Salas',
-    'position': 'Duis PC',
-    'office': 'Madagascar',
-    'ext': '4397',
-    'startDate': '2015/01/18',
-    'salary': 234.196
-  }, {
-    'name': 'Hunter Walter',
-    'position': 'Ullamcorper Duis Cursus Foundation',
-    'office': 'Brazil',
-    'ext': '2227',
-    'startDate': '2015/02/28',
-    'salary': 655.052
-  }, {
-    'name': 'Asher Rich',
-    'position': 'Mauris Ipsum LLP',
-    'office': 'Paraguay',
-    'ext': '7288',
-    'startDate': '2015/08/08',
-    'salary': 222.946
-  }, {
-    'name': 'Angela Carlson',
-    'position': 'Donec Tempor Institute',
-    'office': 'Papua New Guinea',
-    'ext': '5416',
-    'startDate': '2015/02/12',
-    'salary': 562.194
-  }, {
-    'name': 'James Dorsey',
-    'position': 'Ipsum Leo Associates',
-    'office': 'Congo (Brazzaville)',
-    'ext': '6019',
-    'startDate': '2015/01/10',
-    'salary': 629.925
-  }, {
-    'name': 'Wesley Cobb',
-    'position': 'Nunc Est Incorporated',
-    'office': 'Australia',
-    'ext': '6466',
-    'startDate': '2015/01/30',
-    'salary': 343.476
   }, {
     'name': 'Meghan Stephens',
     'position': 'Interdum PC',
@@ -412,14 +223,7 @@ export const TableData:Array<any> = [
     'ext': '5608',
     'startDate': '2015/01/23',
     'salary': 480.067
-  }, {
-    'name': 'Adria Battle',
-    'position': 'Ornare Lectus Incorporated',
-    'office': 'British Indian Ocean Territory',
-    'ext': '7419',
-    'startDate': '2015/05/28',
-    'salary': 257.937
-  }, {
+  },{
     'name': 'Melanie Mcintyre',
     'position': 'Nunc Corp.',
     'office': 'Mongolia',
@@ -622,63 +426,7 @@ export const TableData:Array<any> = [
     'ext': '8176',
     'startDate': '2015/06/17',
     'salary': 137.423
-  }, {
-    'name': 'Buffy Russell',
-    'position': 'Lacus Quisque Ltd',
-    'office': 'Ecuador',
-    'ext': '6741',
-    'startDate': '2014/10/17',
-    'salary': 612.184
-  }, {
-    'name': 'Kaitlin Lamb',
-    'position': 'Malesuada Fringilla Est Associates',
-    'office': 'Algeria',
-    'ext': '5054',
-    'startDate': '2014/10/18',
-    'salary': 327.367
-  }, {
-    'name': 'Leilani Yates',
-    'position': 'Mus Proin LLC',
-    'office': 'South Sudan',
-    'ext': '1550',
-    'startDate': '2015/05/27',
-    'salary': 743.493
-  }, {
-    'name': 'Jemima Moon',
-    'position': 'Phasellus Corp.',
-    'office': 'South Georgia and The South Sandwich Islands',
-    'ext': '7582',
-    'startDate': '2015/05/21',
-    'salary': 496.067
-  }, {
-    'name': 'Hiroko Schwartz',
-    'position': 'Neque Institute',
-    'office': 'Saint Vincent and The Grenadines',
-    'ext': '9368',
-    'startDate': '2015/03/13',
-    'salary': 178.782
-  }, {
-    'name': 'Nathaniel Jensen',
-    'position': 'Mi Tempor Limited',
-    'office': 'Dominica',
-    'ext': '8331',
-    'startDate': '2014/12/05',
-    'salary': 37.441
-  }, {
-    'name': 'Silas Sweeney',
-    'position': 'Ultrices Institute',
-    'office': 'Turkmenistan',
-    'ext': '0746',
-    'startDate': '2014/11/13',
-    'salary': 152.980
-  }, {
-    'name': 'Jermaine Barry',
-    'position': 'Dapibus Corporation',
-    'office': 'Uzbekistan',
-    'ext': '1545',
-    'startDate': '2015/03/06',
-    'salary': 409.463
-  }, {
+  },{
     'name': 'Tatiana Nichols',
     'position': 'Nec Diam Industries',
     'office': 'Cook Islands',

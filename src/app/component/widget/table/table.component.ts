@@ -23,7 +23,7 @@ export class TableComponent implements OnInit {
     {title: 'Salary ($)', name: 'salary'}
   ];
   public page:number = 1;
-  public itemsPerPage:number = 10;
+  public itemsPerPage:number = 7;
   public maxSize:number = 5;
   public numPages:number = 1;
   public length:number = 0;
