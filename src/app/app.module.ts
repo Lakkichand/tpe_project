@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+
 //main component
 import { AppComponent } from './app.component';
 
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app.routing';
 import { PaginationModule } from 'ng2-bootstrap';
 import { TabsModule } from 'ng2-bootstrap';
 import { Ng2TableModule } from 'ng2-table';
-import { ResponsiveModule } from 'ng2-responsive'
+import { ResponsiveModule } from 'ng2-responsive';
+import { ModalModule } from "ng2-modal";
 
 //components
 import { DashboardComponent } from './component/dashboard/dashboard.component';
@@ -33,6 +35,8 @@ import { LoginComponent } from './component/login/login.component';
 import { InsightPatchComponent } from './component/widget/insight-patch/insight-patch.component';
 import { LogReportsComponent } from './component/widget/log-reports/log-reports.component';
 import { TableComponent } from './component/widget/table/table.component';
+import { MultilineChartComponent } from './component/widget/multiline-chart/multiline-chart.component';
+import { PieChartComponent } from './component/widget/pie-chart/pie-chart.component';
 
 
 
@@ -48,7 +52,9 @@ import { TableComponent } from './component/widget/table/table.component';
     LoginComponent,
     InsightPatchComponent,
     LogReportsComponent,
-    TableComponent
+    TableComponent,
+    MultilineChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +66,7 @@ import { TableComponent } from './component/widget/table/table.component';
     PaginationModule.forRoot(),
     TabsModule,
     Ng2TableModule,
+    ModalModule,
   ],
   providers: [
     HttpService,

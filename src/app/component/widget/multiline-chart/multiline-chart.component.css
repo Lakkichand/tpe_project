@@ -1,0 +1,15 @@
+.multi-line-chart{
+    max-width: 900px;
+    width: 100%;
+    min-height: 300px;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
