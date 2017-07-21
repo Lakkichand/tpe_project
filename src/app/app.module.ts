@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import { ResponsiveModule } from 'ng2-responsive'
+import { CommonModule } from '@angular/common';
 
 //main component
 import { AppComponent } from './app.component';
@@ -14,8 +14,12 @@ import { HttpService } from './shared/services/http.service';
 import { WindowService } from './shared/services/window.service';
 import { AuthenticationService } from './shared/services/authentication.service'
 
-//routing Module
+//modules
 import { AppRoutingModule } from './app.routing';
+import { PaginationModule } from 'ng2-bootstrap';
+import { TabsModule } from 'ng2-bootstrap';
+import { Ng2TableModule } from 'ng2-table';
+import { ResponsiveModule } from 'ng2-responsive'
 
 //components
 import { DashboardComponent } from './component/dashboard/dashboard.component';
@@ -28,7 +32,7 @@ import { MainComponent } from './component/main/main.component';
 import { LoginComponent } from './component/login/login.component';
 import { InsightPatchComponent } from './component/widget/insight-patch/insight-patch.component';
 import { LogReportsComponent } from './component/widget/log-reports/log-reports.component';
-
+import { TableComponent } from './component/widget/table/table.component';
 
 
 
@@ -43,14 +47,19 @@ import { LogReportsComponent } from './component/widget/log-reports/log-reports.
     MainComponent,
     LoginComponent,
     InsightPatchComponent,
-    LogReportsComponent
+    LogReportsComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    ResponsiveModule
+    ResponsiveModule,
+    CommonModule,
+    PaginationModule.forRoot(),
+    TabsModule,
+    Ng2TableModule,
   ],
   providers: [
     HttpService,
