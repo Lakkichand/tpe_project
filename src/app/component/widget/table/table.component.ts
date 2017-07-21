@@ -10,20 +10,20 @@ export class TableComponent implements OnInit {
   public name:string = 'Active Alerts';
   public rows:Array<any> = [];
   public columns:Array<any> = [
-    {title: 'Name', name: 'name', filtering: {filterString: '', placeholder: 'Filter by name'}},
+    {title: 'Alert Type', name: 'name', filtering: {filterString: '', placeholder: 'Filter by type'}},
     {
-      title: 'Position',
+      title: 'Zone',
       name: 'position',
       sort: false,
-      filtering: {filterString: '', placeholder: 'Filter by position'}
+      filtering: {filterString: '', placeholder: 'Filter by zone'}
     },
-    {title: 'Office', className: ['office-header', 'text-success'], name: 'office', sort: 'asc'},
-    {title: 'Extn.', name: 'ext', sort: '', filtering: {filterString: '', placeholder: 'Filter by extn.'}},
-    {title: 'Start date', className: 'text-warning', name: 'startDate'},
-    {title: 'Salary ($)', name: 'salary'}
+    {title: 'Time Logged', name: 'office', sort: 'asc'},
+    {title: 'Status', name: 'ext', sort: '', filtering: {filterString: '', placeholder: 'Filter by status'}},
+    {title: 'Action', name: 'startDate'},
+    {title: 'Cost ($)', name: 'salary'}
   ];
   public page:number = 1;
-  public itemsPerPage:number = 7;
+  public itemsPerPage:number = 5;
   public maxSize:number = 5;
   public numPages:number = 1;
   public length:number = 0;
