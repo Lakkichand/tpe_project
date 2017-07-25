@@ -14,14 +14,22 @@
 
   <article class="col-md-12 chart-container">
     <section class="col-md-8 patch-div">
-      <!--<app-barchart></app-barchart>-->
-      <app-multiline-chart></app-multiline-chart>
-      <!--<app-pie-chart></app-pie-chart>-->
+      <app-multiline-chart class="col-md-12"></app-multiline-chart>
     </section>
     <section class="col-md-4 patch-div">
       <app-log-reports [reportData]="reportData"></app-log-reports>
     </section>
   </article>
+   <article class="col-md-12 chart-container">
+    <section class="col-md-8 patch-div">
+      <app-barchart class="col-md-12"></app-barchart>
+        
+    </section>
+   <section class="col-md-4 patch-div">
+     <!--<app-pie-chart class="col-md-12"></app-pie-chart>-->
+    </section>
+  </article>
+  
 
   <article class="col-md-12 table-container">
       <section class="col-md-12 patch-div">
