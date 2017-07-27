@@ -28,7 +28,6 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TopbarComponent } from './component/layout/topbar/topbar.component';
 import { FooterComponent } from './component/layout/footer/footer.component';
 import { SidebarComponent } from './component/layout/sidebar/sidebar.component';
-import { D3Service } from 'd3-ng2-service';
 import { BarchartComponent } from './component/widget/barchart/barchart.component';
 import { MainComponent } from './component/main/main.component';
 import { LoginComponent } from './component/login/login.component';
@@ -71,7 +70,6 @@ import { PieChartComponent } from './component/widget/pie-chart/pie-chart.compon
   providers: [
     HttpService,
     WindowService,
-    D3Service,
     AuthenticationService
   ],
   bootstrap: [AppComponent]

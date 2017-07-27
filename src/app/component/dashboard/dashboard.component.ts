@@ -1,7 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
-import { D3Service, D3, Selection } from 'd3-ng2-service';
-
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
