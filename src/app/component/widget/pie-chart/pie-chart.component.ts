@@ -16,19 +16,19 @@ export class PieChartComponent implements OnInit {
   title: string = 'D3.js with Angular 2!';
   subtitle: string = 'Pie Chart';
 
-  private margin = {top: 20, right: 20, bottom: 30, left: 50};
-  private width: number;
-  private height: number;
-  private radius: number;
+  margin = {top: 20, right: 20, bottom: 20, left: 50};
+  width: number;
+  height: number;
+  radius: number;
 
-  private arc: any;
-  private labelArc: any;
-  private pie: any;
-  private color: any;
-  private svg: any;
+  arc: any;
+  labelArc: any;
+  pie: any;
+  color: any;
+  svg: any;
 
   constructor() {
-    this.width = 900 - this.margin.left - this.margin.right ;
+    this.width = 650 - this.margin.left - this.margin.right ;
     this.height = 500 - this.margin.top - this.margin.bottom;
     this.radius = Math.min(this.width, this.height) / 2;
   }
@@ -38,7 +38,7 @@ export class PieChartComponent implements OnInit {
     this.drawPie();
   }
 
-  private initSvg() {
+  initSvg() {
     this.color = d3Scale.scaleOrdinal()
                         .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
     this.arc = d3Shape.arc()
@@ -55,7 +55,7 @@ export class PieChartComponent implements OnInit {
                  .attr("transform", "translate(" + this.width / 2 + "," + this.height / 2 + ")");;
   }
 
-  private drawPie() {
+  drawPie() {
     let g = this.svg.selectAll(".arc")
                     .data(this.pie(Stats))
                     .enter().append("g")

@@ -36,6 +36,7 @@ import { LogReportsComponent } from './component/widget/log-reports/log-reports.
 import { TableComponent } from './component/widget/table/table.component';
 import { MultilineChartComponent } from './component/widget/multiline-chart/multiline-chart.component';
 import { PieChartComponent } from './component/widget/pie-chart/pie-chart.component';
+import { DonutChartComponent } from './component/widget/donut-chart/donut-chart.component';
 
 
 
@@ -53,7 +54,8 @@ import { PieChartComponent } from './component/widget/pie-chart/pie-chart.compon
     LogReportsComponent,
     TableComponent,
     MultilineChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    DonutChartComponent
   ],
   imports: [
     BrowserModule,
