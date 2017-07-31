@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 
+
 //main component
 import { AppComponent } from './app.component';
 
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
 //services
 import { HttpService } from './shared/services/http.service';
 import { WindowService } from './shared/services/window.service';
-import { AuthenticationService } from './shared/services/authentication.service'
+import { AuthenticationService } from './shared/services/authentication.service';
+import { KeycloakService }  from './shared/services/keycloak-service';
 
 //modules
 import { AppRoutingModule } from './app.routing';
@@ -22,6 +24,7 @@ import { TabsModule } from 'ng2-bootstrap';
 import { Ng2TableModule } from 'ng2-table';
 import { ResponsiveModule } from 'ng2-responsive';
 import { ModalModule } from "ng2-modal";
+import { Ng2KeycloakModule } from '@ebondu/angular2-keycloak';
 
 //components
 import { DashboardComponent } from './component/dashboard/dashboard.component';
@@ -66,13 +69,15 @@ import { PieChartComponent } from './component/widget/pie-chart/pie-chart.compon
     PaginationModule.forRoot(),
     TabsModule,
     Ng2TableModule,
+    Ng2KeycloakModule,
     ModalModule,
   ],
   providers: [
     HttpService,
     WindowService,
     D3Service,
-    AuthenticationService
+    AuthenticationService,
+    KeycloakService
   ],
   bootstrap: [AppComponent]
 })
