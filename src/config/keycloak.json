@@ -1,0 +1,8 @@
+{
+  "realm": "tpe",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "none",
+  "resource": "ui",
+  "public-client": true,
+  "use-resource-role-mappings": true
+}
