@@ -18,10 +18,7 @@ export class MainComponent implements OnInit {
       } 
     });
 
-    KeycloakService.getAuth().authz.loadUserInfo().success(function(userData){
-    // this.userInfo = userData; 
-    console.log('userdata : ',userData );
-    });
+   
   }
 
   ngOnInit() {

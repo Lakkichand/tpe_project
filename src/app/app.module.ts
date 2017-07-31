@@ -5,11 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-
-
 //main component
 import { AppComponent } from './app.component';
-
 
 //services
 import { HttpService } from './shared/services/http.service';
@@ -31,7 +28,6 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TopbarComponent } from './component/layout/topbar/topbar.component';
 import { FooterComponent } from './component/layout/footer/footer.component';
 import { SidebarComponent } from './component/layout/sidebar/sidebar.component';
-import { D3Service } from 'd3-ng2-service';
 import { BarchartComponent } from './component/widget/barchart/barchart.component';
 import { MainComponent } from './component/main/main.component';
 import { LoginComponent } from './component/login/login.component';
@@ -40,6 +36,7 @@ import { LogReportsComponent } from './component/widget/log-reports/log-reports.
 import { TableComponent } from './component/widget/table/table.component';
 import { MultilineChartComponent } from './component/widget/multiline-chart/multiline-chart.component';
 import { PieChartComponent } from './component/widget/pie-chart/pie-chart.component';
+import { DonutChartComponent } from './component/widget/donut-chart/donut-chart.component';
 
 
 
@@ -57,7 +54,8 @@ import { PieChartComponent } from './component/widget/pie-chart/pie-chart.compon
     LogReportsComponent,
     TableComponent,
     MultilineChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    DonutChartComponent
   ],
   imports: [
     BrowserModule,
@@ -75,9 +73,9 @@ import { PieChartComponent } from './component/widget/pie-chart/pie-chart.compon
   providers: [
     HttpService,
     WindowService,
-    D3Service,
     AuthenticationService,
     KeycloakService
+
   ],
   bootstrap: [AppComponent]
 })
