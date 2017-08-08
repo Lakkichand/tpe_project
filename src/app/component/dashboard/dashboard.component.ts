@@ -9,8 +9,20 @@ export class DashboardComponent implements OnInit {
 
   insightArray: any[] = [];
   reportData: any[] = [];
+  selectedPoolMontior: any;
+  pools: any[] = [];
 
   constructor() {
+    this.loadInsightData();
+    this.getMonitorPools();
+    this.loadReportData();
+  }
+
+  ngOnInit() {
+
+  }
+
+  loadInsightData() {
     this.insightArray = [{
       insightHeading: 'Lights',
       insightValue: '17:44',
@@ -31,8 +43,9 @@ export class DashboardComponent implements OnInit {
       insightInfo_2: 'avg weekly cost $39'
 
     }]
+  }
 
-
+  loadReportData() {
     this.reportData = [{
       time: '4 December 22:11',
       topic: 'BBQ area light flickering',
@@ -54,10 +67,25 @@ export class DashboardComponent implements OnInit {
       reporter: 'System Report',
       assets: 'View'
     }]
+
   }
 
-  ngOnInit() {
+  getMonitorPools() {
+    this.pools = [
+      { id: 0, key: 'Pool', value: 'Main Pool Chemical Level' },
+      { id: 1, key: 'Light', value: 'Main Light Power consumption' }
+    ];
 
+
+    if (this.selectedPoolMontior == null) {
+      this.selectedPoolMontior = this.pools[0];
+    }
+  }
+
+
+  updatePool(newPool: any) {
+    this.selectedPoolMontior = newPool;
+    console.log('pool selected', this.selectedPoolMontior);
   }
 
 }
