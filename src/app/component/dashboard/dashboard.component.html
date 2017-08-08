@@ -22,7 +22,8 @@
       </article>
       <article>
       <app-multiline-chart *ngIf="selectedPoolMontior.key=='Pool'" class="col-md-12"></app-multiline-chart>
-      <app-barchart *ngIf="selectedPoolMontior.key=='Light'" class="col-md-12"></app-barchart>
+      <app-barchart *ngIf="selectedPoolMontior.key=='irrigation'" class="col-md-12"></app-barchart>
+      <app-area-chart *ngIf="selectedPoolMontior.key=='Light'" class="col-md-12"></app-area-chart>
       </article>
     </section>
     <section class="col-md-4 patch-div">

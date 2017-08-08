@@ -73,7 +73,9 @@ export class DashboardComponent implements OnInit {
   getMonitorPools() {
     this.pools = [
       { id: 0, key: 'Pool', value: 'Main Pool Chemical Level' },
-      { id: 1, key: 'Light', value: 'Main Light Power consumption' }
+      { id: 1, key: 'Light', value: 'Main Light Power consumption' },
+      { id: 2, key: 'irrigation', value: 'Water consumption' }
+      
     ];
 
 

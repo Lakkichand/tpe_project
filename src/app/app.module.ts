@@ -39,6 +39,7 @@ import { TableComponent } from './component/widget/table/table.component';
 import { MultilineChartComponent } from './component/widget/multiline-chart/multiline-chart.component';
 import { PieChartComponent } from './component/widget/pie-chart/pie-chart.component';
 import { DonutChartComponent } from './component/widget/donut-chart/donut-chart.component';
+import { AreaChartComponent } from './component/widget/area-chart/area-chart.component';
 
 
 
@@ -57,7 +58,8 @@ import { DonutChartComponent } from './component/widget/donut-chart/donut-chart.
     TableComponent,
     MultilineChartComponent,
     PieChartComponent,
-    DonutChartComponent
+    DonutChartComponent,
+    AreaChartComponent
   ],
   imports: [
     BrowserModule,
