@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserDetailService } from '../../../shared/services/user-detail.service';
 
 @Component({
   selector: 'sidebar',
@@ -7,9 +8,23 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
   menuList: any;
+  siteMangerList: any;
+  hoaList: any;
 
-  constructor() {
-    this.menuList = [{
+  constructor(private userDetailService: UserDetailService) {
+
+    this.hoaList = [{
+      name: 'Setting',
+      tabName: 'Setting',
+      imgName: 'icon_setting'
+    }, {
+      name: 'logout',
+      tabName: 'Logut',
+      imgName: 'icon_logout',
+      count: 5
+    }];
+
+    this.siteMangerList = [{
       name: 'Dashboard',
       tabName: 'Dashboard',
       imgName: 'icon_dashboard'
@@ -39,9 +54,16 @@ export class SidebarComponent {
       tabName: 'Configuration',
       imgName: 'icon_configuration'
     }];
+
+    if (this.userDetailService.isHOAuser) {
+      this.menuList = this.hoaList;
+    }
+    else if (this.userDetailService.isSiteManagerUser) {
+      this.menuList = this.siteMangerList;
+    }
   }
 
- openDailog(){
+  openDailog() {
 
- }
+  }
 }

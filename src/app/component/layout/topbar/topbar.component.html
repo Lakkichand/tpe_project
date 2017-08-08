@@ -21,34 +21,41 @@
 </nav>-->
 
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top tpe-header">
-    <a class="navbar-brand app_icon col-md-7" href="#">
-        <img [src]="topbarConst.TPE_LOGO" />
+    <a class="navbar-brand app_icon col-md-5 logo-heading" href="#">
+        <img [src]="topbarConst.TPE_LOGO" class="cs-logo" />
         <article class="tpe_name">
-            <span class="tpe_heading">{{topbarConst.TPE_NAME}}</span>
-            <span>{{topbarConst.TPE_CAPTION}}</span>
+            <article class="tpe_heading">{{topbarConst.TPE_NAME}}</article>
+            <article>{{topbarConst.TPE_CAPTION}}</article>
         </article>
     </a>
 
-    <ul class="nav navbar-nav mr-auto col-md-3">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <ul class="nav navbar-nav mr-auto col-md-7">
+        <li class="nav-item">
+            <a class="nav-link" href="#">{{locationData.name}}</a>
+            <a class="nav-link" href="#">{{locationData.area}} {{locationData.country}} {{locationData.pincode}} </a>
+
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">{{temp}} </a>
+            <a class="nav-link" href="#">{{temp_condtion }} </a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">{{ whatTime | async | date:'hh:mm' }}</a>
+            <a class="nav-link" href="#">{{ whatTime | async | date:'MMMM d, y' }}</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#" (click)="signout()">Signout</a>
         </li>
+        <li class="nav-item">
+            <img [src]="topbarConst.USER_LOGO" class="cs-logo" />
+        </li>
+        <li class="nav-item">
+            <!--<a class="nav-link" href="#">{{userDetailService.userDetails.name}}</a>-->
+            <a class="nav-link">User name</a>
+        </li>
+        
+
     </ul>
-    <ul class="nav navbar-nav col-md-2 ">
-        <li class="nav-item">
-            <a class="nav-link" href="https://medium.com/@beeman"><i class="fa fa-medium" aria-hidden="true"></i></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/@beeman_nl"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://github.com/beeman"><i class="fa fa-github" aria-hidden="true"></i></a>
-        </li>
-    </ul>
+
 </nav>

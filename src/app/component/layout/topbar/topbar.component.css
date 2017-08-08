@@ -28,3 +28,11 @@
     font-weight: bold;
 
 }
+
+.cs-logo{
+	height: 70px;
+}
+
+.logo-heading{
+	display: inline-flex;
+}

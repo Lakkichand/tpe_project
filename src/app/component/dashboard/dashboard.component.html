@@ -13,34 +13,40 @@
   </article>
 
   <article class="col-md-12 chart-container">
-    <section class="col-md-8 patch-div">
+    <section class="col-md-8 patch-div Monitoring-heading">
+      <article class="col-md-12">
+        <span class="col-md-4">Monitoring</span>
+        <select class="col-md-offset-2 col-md-5">
+          <option value="main pool">Main pool Chemical Levels</option>
+        </select>
+      </article>
       <app-multiline-chart class="col-md-12"></app-multiline-chart>
     </section>
     <section class="col-md-4 patch-div">
       <app-log-reports [reportData]="reportData"></app-log-reports>
     </section>
   </article>
-   <article class="col-md-12 chart-container">
+  <article class="col-md-12 chart-container">
     <section class="col-md-8 patch-div">
       <app-barchart class="col-md-12"></app-barchart>
-        
+
     </section>
-   <section class="col-md-4 patch-div">
-     <!--<app-pie-chart class="col-md-12"></app-pie-chart>-->
+    <section class="col-md-4 patch-div">
+      <!--<app-pie-chart class="col-md-12"></app-pie-chart>-->
     </section>
   </article>
-  
+
 
   <article class="col-md-12 table-container">
-      <section class="col-md-12 patch-div">
-          <table-demo></table-demo>
-       </section>
+    <section class="col-md-12 patch-div">
+      <table-demo></table-demo>
+    </section>
   </article>
 
   <article class="col-md-12 chart-container">
     <section class="col-md-7 patch-div">
-          <app-donut-chart></app-donut-chart>
-       </section>
+      <app-donut-chart></app-donut-chart>
+    </section>
   </article>
-  
+
 </section>

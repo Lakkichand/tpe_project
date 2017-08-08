@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { KeycloakService }  from '../../shared/services/keycloak-service';
+import { KeycloakService } from '../../shared/services/keycloak.service';
+import { UserDetailService } from '../../shared/services/user-detail.service';
 
 @Component({
   selector: 'app-main',
@@ -8,17 +9,23 @@ import { KeycloakService }  from '../../shared/services/keycloak-service';
 })
 export class MainComponent implements OnInit {
 
- 
-  
-  constructor(private KeycloakService: KeycloakService) { 
-    this.KeycloakService.getToken()
-    .then(token => {
-      var tokenData = {
-        "token": token
-      } 
-    });
+  userDetails: any;
 
-   
+  constructor(private keycloakService: KeycloakService, private userDetailService: UserDetailService) {
+
+    this.keycloakService.getToken()
+      .then(token => {
+        var tokenData = {
+          "token": token
+        }
+      });
+
+    // this.keycloakService.getUserDetails().authz.loadUserInfo().success(function (data) {
+    //   this.userDetails = data;
+    // })
+
+    // console.log('userDetails  :', this.userDetails);
+
   }
 
   ngOnInit() {

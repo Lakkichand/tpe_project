@@ -12,7 +12,9 @@ import { AppComponent } from './app.component';
 import { HttpService } from './shared/services/http.service';
 import { WindowService } from './shared/services/window.service';
 import { AuthenticationService } from './shared/services/authentication.service';
-import { KeycloakService }  from './shared/services/keycloak-service';
+import { KeycloakService }  from './shared/services/keycloak.service';
+import { UserDetailService }  from './shared/services/user-detail.service';
+
 
 //modules
 import { AppRoutingModule } from './app.routing';
@@ -74,7 +76,8 @@ import { DonutChartComponent } from './component/widget/donut-chart/donut-chart.
     HttpService,
     WindowService,
     AuthenticationService,
-    KeycloakService
+    KeycloakService,
+    UserDetailService
 
   ],
   bootstrap: [AppComponent]
