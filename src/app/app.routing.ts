@@ -1,20 +1,21 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent }   from './app.component';
-import { MainComponent } from './component/main/main.component';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { LoginComponent } from './component/login/login.component';
+import { LightingComponent } from './component/lighting/lighting.component'
 
 const appRoutes: Routes = [
-    { path: 'login',  component: LoginComponent },
-    { path: '',  component: MainComponent }
+    { path: '', component: DashboardComponent },
+    { path: 'lighting', component: LightingComponent }
 ];
 
-@NgModule( {
+@NgModule({
     imports: [
-        RouterModule.forRoot( appRoutes )
+        RouterModule.forRoot(appRoutes)
     ],
     exports: [
         RouterModule
     ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

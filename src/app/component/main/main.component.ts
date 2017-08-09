@@ -20,12 +20,6 @@ export class MainComponent implements OnInit {
         }
       });
 
-    // this.keycloakService.getUserDetails().authz.loadUserInfo().success(function (data) {
-    //   this.userDetails = data;
-    // })
-
-    // console.log('userDetails  :', this.userDetails);
-
   }
 
   ngOnInit() {

@@ -27,7 +27,8 @@ export class SidebarComponent {
     this.siteMangerList = [{
       name: 'Dashboard',
       tabName: 'Dashboard',
-      imgName: 'icon_dashboard'
+      imgName: 'icon_dashboard',
+      link: '/'
     }, {
       name: 'Notification',
       tabName: 'Notification',
@@ -36,7 +37,8 @@ export class SidebarComponent {
     }, {
       name: 'Lighting',
       tabName: 'Lighting',
-      imgName: 'icon_lighting'
+      imgName: 'icon_lighting',
+      link: '/lighting'
     }, {
       name: 'Pools',
       tabName: 'Pools',

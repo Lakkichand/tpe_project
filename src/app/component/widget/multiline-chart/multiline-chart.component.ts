@@ -18,7 +18,7 @@ export class MultilineChartComponent implements OnInit {
   data: any;
 
   svg: any;
-  margin = {top: 20, right: 80, bottom: 30, left: 50};
+  margin = { top: 20, right: 80, bottom: 30, left: 50 };
   g: any;
   width: number;
   height: number;
@@ -33,9 +33,9 @@ export class MultilineChartComponent implements OnInit {
 
   ngOnInit() {
 
-    this.data = Temperatures.map((v) => v.values.map((v) => v.date ))[0];
-                            //.reduce((a, b) => a.concat(b), []);
-   
+    this.data = Temperatures.map((v) => v.values.map((v) => v.date))[0];
+    //.reduce((a, b) => a.concat(b), []);
+
     this.initChart();
     this.drawAxis();
     this.drawPath();
@@ -48,24 +48,24 @@ export class MultilineChartComponent implements OnInit {
     this.height = this.svg.attr("height") - this.margin.top - this.margin.bottom;
 
     this.g = this.svg.append("g").attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
-      //console.log('width ', this.width);
+    //console.log('width ', this.width);
     this.x = d3Scale.scaleTime().range([0, this.width]);
     this.y = d3Scale.scaleLinear().range([this.height, 0]);
     this.z = d3Scale.scaleOrdinal(d3Scale.schemeCategory10);
 
     this.line = d3Shape.line()
-                       .curve(d3Shape.curveBasis)
-                       .x( (d: any) => this.x(d.date) )
-                       .y( (d: any) => this.y(d.temperature) );
+      .curve(d3Shape.curveBasis)
+      .x((d: any) => this.x(d.date))
+      .y((d: any) => this.y(d.temperature));
 
-    this.x.domain(d3Array.extent(this.data, (d: Date) => d ));
+    this.x.domain(d3Array.extent(this.data, (d: Date) => d));
 
     this.y.domain([
-      d3Array.min(Temperatures, function(c) { return d3Array.min(c.values, function(d) { return d.temperature; }); }),
-      d3Array.max(Temperatures, function(c) { return d3Array.max(c.values, function(d) { return d.temperature; }); })
+      d3Array.min(Temperatures, function (c) { return d3Array.min(c.values, function (d) { return d.temperature; }); }),
+      d3Array.max(Temperatures, function (c) { return d3Array.max(c.values, function (d) { return d.temperature; }); })
     ]);
 
-    this.z.domain(Temperatures.map(function(c) { return c.id; }));
+    this.z.domain(Temperatures.map(function (c) { return c.id; }));
   }
 
   private drawAxis(): void {
@@ -93,15 +93,18 @@ export class MultilineChartComponent implements OnInit {
 
     city.append("path")
       .attr("class", "line")
-      .attr("d", (d) => this.line(d.values) )
-      .style("stroke", (d) => this.z(d.id) );
+      .style('fill', 'none')
+      .style('stroke', 'steelblue')
+      .style('stroke-width', '1.5px')
+      .attr("d", (d) => this.line(d.values))
+      .style("stroke", (d) => this.z(d.id));
 
     city.append("text")
-      .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
-      .attr("transform", (d) => "translate(" + this.x(d.value.date) + "," + this.y(d.value.temperature) + ")" )
+      .datum(function (d) { return { id: d.id, value: d.values[d.values.length - 1] }; })
+      .attr("transform", (d) => "translate(" + this.x(d.value.date) + "," + this.y(d.value.temperature) + ")")
       .attr("x", 3)
       .attr("dy", "0.35em")
       .style("font", "10px sans-serif")
-      .text(function(d) { return d.id; });
+      .text(function (d) { return d.id; });
   }
 }

@@ -38,7 +38,7 @@ export class TopbarComponent {
     this.httpService.getData('http://api.wunderground.com/api/32f9925b5a4931b4/forecast/q/CA/95054.json', true)
       .subscribe(
       data => {
-        console.log('data in get server message: ', data);
+        // console.log('data in get server message: ', data);
         this.temp=data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
         this.temp_condtion=data.forecast.simpleforecast.forecastday[0].conditions;
       },

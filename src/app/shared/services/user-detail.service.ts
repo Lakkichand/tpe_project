@@ -23,8 +23,8 @@ export class UserDetailService {
         //     this.userDetails = data.name;
         // })
 
-        console.log('isHOAuser :', this.isHOAuser );
-        console.log('isSiteManagerUser :', this.isSiteManagerUser );
+        // console.log('isHOAuser :', this.isHOAuser );
+        // console.log('isSiteManagerUser :', this.isSiteManagerUser );
         // console.log('userDetails :', this.userDetails );
 
     }

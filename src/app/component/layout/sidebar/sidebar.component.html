@@ -2,10 +2,10 @@
   <ul class="nav navbar-nav leftNavBGColor">
 
     <li *ngFor="let menu of menuList">
-      <a class="col-md-12 nopadding ">
+      <a class="col-md-12 nopadding " routerLink="{{menu.link}}">
         <!--<img class="center-block leftNavImages" src="../../../../app/assets/images/leftNav/{{menu.imgName}}.png"
 			/>-->
-        <span class="col-md-12 nopadding text-center leftTabNavName">{{menu.name}}</span>
+        <span class="col-md-12 nopadding text-center leftTabNavName" >{{menu.name}}</span>
       </a>
     </li>
     <li class="notificationContainer">
