@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { UserDetailService } from '../../../shared/services/user-detail.service';
+import { ModaldialogComponent } from '../../shared/modaldialog/modaldialog.component';
+import { DialogService } from "ng2-bootstrap-modal";
+
 
 @Component({
   selector: 'sidebar',
@@ -11,7 +14,7 @@ export class SidebarComponent {
   siteMangerList: any;
   hoaList: any;
 
-  constructor(private userDetailService: UserDetailService) {
+  constructor(private userDetailService: UserDetailService, private dialogService: DialogService) {
 
     this.hoaList = [{
       name: 'Setting',
@@ -66,6 +69,23 @@ export class SidebarComponent {
   }
 
   openDailog() {
-
+    let disposable = this.dialogService.addDialog(ModaldialogComponent, {
+      title: 'Confirm title',
+      message: 'Confirm message'
+    })
+      .subscribe((isConfirmed) => {
+        //We get dialog result
+        if (isConfirmed) {
+          alert('accepted');
+        }
+        else {
+          alert('declined');
+        }
+      });
+    //We can close dialog calling disposable.unsubscribe();
+    //If dialog was not closed manually close it by timeout
+    setTimeout(() => {
+      disposable.unsubscribe();
+    }, 10000);
   }
 }

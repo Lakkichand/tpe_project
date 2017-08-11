@@ -12,8 +12,8 @@ import { AppComponent } from './app.component';
 import { HttpService } from './shared/services/http.service';
 import { WindowService } from './shared/services/window.service';
 import { AuthenticationService } from './shared/services/authentication.service';
-import { KeycloakService }  from './shared/services/keycloak.service';
-import { UserDetailService }  from './shared/services/user-detail.service';
+import { KeycloakService } from './shared/services/keycloak.service';
+import { UserDetailService } from './shared/services/user-detail.service';
 
 
 //modules
@@ -23,6 +23,7 @@ import { TabsModule } from 'ng2-bootstrap';
 import { Ng2TableModule } from 'ng2-table';
 import { ResponsiveModule } from 'ng2-responsive';
 import { ModalModule } from "ng2-modal";
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { Ng2KeycloakModule } from '@ebondu/angular2-keycloak';
 
 //components
@@ -41,6 +42,9 @@ import { PieChartComponent } from './component/widget/pie-chart/pie-chart.compon
 import { DonutChartComponent } from './component/widget/donut-chart/donut-chart.component';
 import { AreaChartComponent } from './component/widget/area-chart/area-chart.component';
 import { LightingComponent } from './component/lighting/lighting.component';
+import { LightInsightpatchComponent } from './component/widget/light-insightpatch/light-insightpatch.component';
+import { ModalboxComponent } from './component/shared/modalbox/modalbox.component';
+import { ModaldialogComponent } from './component/shared/modaldialog/modaldialog.component';
 
 
 
@@ -61,7 +65,10 @@ import { LightingComponent } from './component/lighting/lighting.component';
     PieChartComponent,
     DonutChartComponent,
     AreaChartComponent,
-    LightingComponent
+    LightingComponent,
+    LightInsightpatchComponent,
+    ModalboxComponent,
+    ModaldialogComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +82,7 @@ import { LightingComponent } from './component/lighting/lighting.component';
     Ng2TableModule,
     Ng2KeycloakModule,
     ModalModule,
+    BootstrapModalModule
   ],
   providers: [
     HttpService,
@@ -83,6 +91,9 @@ import { LightingComponent } from './component/lighting/lighting.component';
     KeycloakService,
     UserDetailService
 
+  ],
+  entryComponents: [
+    ModaldialogComponent
   ],
   bootstrap: [AppComponent]
 })

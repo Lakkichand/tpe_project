@@ -76,6 +76,7 @@ export class MultilineChartComponent implements OnInit {
 
     this.g.append("g")
       .attr("class", "axis axis--y")
+      .style('display', 'none')
       .call(d3Axis.axisLeft(this.y))
       .append("text")
       .attr("transform", "rotate(-90)")

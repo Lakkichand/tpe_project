@@ -1,3 +1,45 @@
-<p>
-  lighting works!
-</p>
+<section class="col-md-12 col-xs-12 dashboard-widget-container nopadding ">
+
+  <article class="col-md-12 patch-container">
+    <section class="col-md-6 patch-div">
+      <app-light-insightpatch [lightinsightData]="insightArray[0]"></app-light-insightpatch>
+    </section>
+    <section class="col-md-6 patch-div">
+      <app-light-insightpatch [lightinsightData]="insightArray[1]"></app-light-insightpatch>
+    </section>
+  </article>
+
+  <article class="col-md-12 chart-container">
+    <section class="col-md-8 patch-div Monitoring-heading">
+      <article class="col-md-12">
+        <span class="col-md-4">Monitoring</span>
+        <!--<select class="col-md-offset-2 col-md-5" [(ngModel)]="selectedPool" (ngModelChange)="updatePool($event)">
+          <option [ngValue]="pool" class="listfont" *ngFor="let pool of pools">{{pool.value}}</option>
+        </select>-->
+      </article>
+      <article>
+      <!--<app-multiline-chart *ngIf="selectedPoolMontior.key=='Pool'" class="col-md-12"></app-multiline-chart>
+      <app-barchart *ngIf="selectedPoolMontior.key=='irrigation'" class="col-md-12"></app-barchart>
+      <app-area-chart *ngIf="selectedPoolMontior.key=='Light'" class="col-md-12"></app-area-chart>-->
+      </article>
+    </section>
+    <section class="col-md-4 patch-div">
+      <app-log-reports [reportData]="reportData"></app-log-reports>
+    </section>
+  </article>
+
+
+
+  <article class="col-md-12 table-container">
+    <section class="col-md-12 patch-div">
+      <table-demo></table-demo>
+    </section>
+  </article>
+
+  <!--<article class="col-md-12 chart-container">
+    <section class="col-md-7 patch-div">
+      <app-donut-chart></app-donut-chart>
+    </section>
+  </article>-->
+
+</section>
