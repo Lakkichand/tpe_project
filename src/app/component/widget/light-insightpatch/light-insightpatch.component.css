@@ -1,0 +1,27 @@
+.nopadding{
+	padding: 0px;
+}
+
+.patch-heading {
+	padding: 2px;
+	padding-left: 10px;
+	font-weight: normal;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	font-size: 16px;
+}
+
+.patch_value{
+    display: inline-flex;
+}
+
+.insightInfo, .insightUnit{
+    font-size: 12px;
+    /*text-align: center!important;*/
+}
+
+.insightValue{
+    font-size: 14px;
+    /*text-align: center!important;*/
+}
+

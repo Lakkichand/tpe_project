@@ -1,0 +1,62 @@
+<section class=" col-md-12 col-sm-12 nopadding">
+
+  <article class="col-md-12 col-sm-12 patch-detail-container">
+    <p class="col-md-12 col-sm-12 patch-heading " *ngIf="lightinsightData.id=='site'">{{lightInsightConst.SITE_DTL}}</p>
+    <p class="col-md-12 col-sm-12 patch-heading " *ngIf="lightinsightData.id=='group'">{{lightInsightConst.GRP_DTL}}</p>
+    
+    <article class="patch_value col-md-7 nopadding">
+      <section class="col-md-12 nopadding">
+        <section class="col-md-12 col-sm-12 nopadding">
+          <span class="patch-heading ">{{lightInsightConst.POWER_CONS}}</span>
+        </section>
+        <article class="col-md-12 nopadding patch_value">
+          <section class="col-md-6 nopadding">
+            <span class="col-md-12 patch-heading nopadding ">{{lightInsightConst.CURR_MNTH}}</span>
+            <article class="col-md-12 nopadding">
+              <span class="col-md-12 patch-heading nopadding">{{lightInsightConst.TOD}}</span>
+              <article class="col-md-12">
+                <span class="col-md-6 insightValue ">{{lightinsightData.current_month.total_to_date_value}}  {{lightinsightData.powerUnit}}</span>
+                <span class="col-md-6 insightUnit ">{{lightinsightData.current_month.total_to_date_amt}} </span>
+              </article>
+            </article>
+            <article class="col-md-12 nopadding">
+              <span class=" col-md-12 patch-heading nopadding ">{{lightInsightConst.APD}}</span>
+              <article class="col-md-12">
+                <span class="col-md-6 insightValue ">{{lightinsightData.current_month.avg_per_day_value}}  {{lightinsightData.powerUnit}}</span>
+                <span class="col-md-6 insightUnit ">{{lightinsightData.current_month.avg_per_day_amt}} </span>
+              </article>
+            </article>
+          </section>
+          <section class="col-md-6 nopadding">
+            <span class="col-md-12 patch-heading nopadding">{{lightInsightConst.LAST_MNTH}}</span>
+            <article class="col-md-12 nopadding">
+              <span class="col-md-12 patch-heading nopadding">{{lightInsightConst.TOM}}</span>
+              <article class="col-md-12">
+                <span class="col-md-6 insightValue ">{{lightinsightData.last_month.total_to_month_value}}  {{lightinsightData.powerUnit}}</span>
+                <span class="col-md-6 insightUnit ">{{lightinsightData.last_month.total_to_month_amt}} </span>
+              </article>
+            </article>
+            <article class="col-md-12 nopadding">
+              <span class="col-md-12 patch-heading nopadding ">{{lightInsightConst.APD}}</span>
+              <article class="col-md-12">
+                <span class="col-md-6 insightValue ">{{lightinsightData.last_month.avg_per_month_value}}  {{lightinsightData.powerUnit}}</span>
+                <span class="col-md-6 insightUnit ">{{lightinsightData.last_month.avg_per_month_amt}} </span>
+              </article>
+            </article>
+          </section>
+        </article>
+      </section>
+    </article>
+    <article class="patch_value col-md-4 nopadding"  (click)="openModalpopup()">
+      <section class="col-md-12 nopadding">
+        <section class="col-md-12 col-sm-12 nopadding ">
+          <span class="patch-heading " >{{lightInsightConst.LIGHT_CTR}}</span>
+        </section>
+
+      </section>
+    </article>
+
+  </article>
+</section>
+
+<app-modalbox #modalContainer ></app-modalbox>

@@ -1,0 +1,55 @@
+<modal #modalContainer class="feedback_modal">
+    <modal-header>
+        <section class="modal-header">{{modalConst.PROVIDE_FEED}}</section>
+    </modal-header>
+    <modal-content>
+        <section class="row">
+            <section class="col-md-12 col-sm-12 col-xs-12">
+                {{modalConst.PROVIDE}}&nbsp;&nbsp;
+                <br class="break">
+                <span *ngFor="let frb of modalConst.RADIO_BTN_ARRAY">
+                    <input type="radio" class="feedback-radio" name="commentType" [(ngModel)]="commentType" value="{{frb.value}}" checked="{{frb.selected}}">
+                <label for="customCommentRadBtn" class="feedback-radbtn">{{frb.btnLabel}}</label>
+                &nbsp;&nbsp;
+                </span>
+            </section>
+        </section>
+        <section class="row">
+            <section class="col-md-12 col-sm-8 col-xs-10">
+                <section class="feedback-predefined">
+                    <table width="100%">
+                        <tr>
+                            <td width="180px;">{{modalConst.RELATE}}</td>
+                            <td class="feedback-pre-areaselector">
+                                <select class="form-control" [(ngModel)]="knowledgeArea">
+                                    <option *ngFor="let pdc of modalConst.PREDEFINDED_COMMENT_TYPE" value="{{pdc.value}}">{{pdc.option}}</option>
+                                    
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section *ngIf="knowledgeArea == 'olliExpertise'" id="expertiseOptions">
+                    {{feedbackConst.CONCERN}}
+                    <section class="feedback-concern-list">
+
+                        <span *ngFor="let oeo of modalConst.OLLI_EXPERTISE_KNOWLEDGE_AREA">
+                            <input type="radio" name="expertiseType" [(ngModel)]="olliConcern" value="{{oeo.value}}"  class="feedback-concern-listoption">
+                        <label for="currentheadingRadBtn" class="feedconcern-txt">{{oeo.option}}</label>
+                        <br/>
+                        </span>
+
+                    </section>
+                </section>
+
+            </section>
+        </section>
+        <section id="customCommentOptions" class="feedback-txtdiv">
+            <textarea rows="2" cols="10" placeholder={{modalConst.FEEDBACK_TEXT}} [(ngModel)]="feedbackText"></textarea>
+        </section>
+
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-default btn-sm" (click)="modalClose()">{{modalConst.CANCELBTN}}</button>
+    </modal-footer>
+</modal>
