@@ -1,38 +1,65 @@
-.tpe-header {
-	background-color: #333848;
-	border-top: 3px solid #F6D63F;
-	min-height: 70px !important;
-	margin-bottom: 0px;
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        padding: 0px;
+    }
 }
-
-.tpe-header-logo {
-	padding-left: 0px;
-	padding-right: 0px;
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
 }
-
-.headingContainer {
-	border-left: 1px solid;
-	color: #ffffff;
-	margin-top: 10px;
-	padding-left: 10px;
-	padding-right: 0px;
+header {
+    border-top: 3px solid #fcbd14;
+    padding: 10px 0px;
 }
-
-.tpe_name{
-    display: inline;
-    color: #E4E5E6;
+header ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
 }
-
-.tpe_name >.tpe_heading{
-    font-size: 18px;
+.col-sm-9 {
+    float: right;
+    padding: 0px;
+}
+.col-sm-3 {
+    width: 21.333333333%;
+}
+.col-xs-2,
+.col-sm-3 {
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+}
+.top-information {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+}
+.top-information .map {
     font-weight: bold;
-
+    display: block;
 }
-
-.cs-logo{
-	height: 70px;
+.top-information img {
+    float: left;
+    padding-right: 8px;
 }
-
-.logo-heading{
-	display: inline-flex;
+.box-border {
+    border-right: 1px solid #c1c1c1;
+    padding: 13px;
+    text-align: left
+}
+.top-information .address {
+    font-size: 12px;
+}
+.Cloudy {
+    width: 17.33333333%
+}
+.userinfo {
+    /*width: 18.8888888%*/
+    
+    border: 0px;
+}
+.userinfoimg {
+    float: right !important;
+    padding-left: 10px;
+    margin-top: -5px;
 }

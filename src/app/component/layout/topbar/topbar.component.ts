@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'topbar',
   templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.css']
+  styleUrls: ['../../../app.component.css']
 })
 export class TopbarComponent {
 

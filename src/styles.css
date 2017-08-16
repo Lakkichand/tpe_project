@@ -3,9 +3,29 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
 
-
 body {
- background-color: #F5F5F7;
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
 }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+			-moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			-webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			-moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			-o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			transition: width 1s ease-in-out, left 1.5s ease-in-out;
+		}
 
 

@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
 import { UserDetailService } from '../../../shared/services/user-detail.service';
 import { ModaldialogComponent } from '../../shared/modaldialog/modaldialog.component';
+import { KeycloakService } from '../../../shared/services/keycloak.service';
 import { DialogService } from "ng2-bootstrap-modal";
 
 
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['../../../app.component.css']
 })
 export class SidebarComponent {
   menuList: any;
   siteMangerList: any;
   hoaList: any;
 
-  constructor(private userDetailService: UserDetailService, private dialogService: DialogService) {
+  constructor(private userDetailService: UserDetailService,
+    private dialogService: DialogService,
+    private KeycloakService: KeycloakService) {
 
     this.hoaList = [{
       name: 'Setting',
@@ -67,6 +70,12 @@ export class SidebarComponent {
       this.menuList = this.siteMangerList;
     }
   }
+
+
+  signout() {
+    KeycloakService.logout();
+  }
+
 
   openDailog() {
     let disposable = this.dialogService.addDialog(ModaldialogComponent, {

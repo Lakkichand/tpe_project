@@ -1,11 +1,11 @@
-<nav class="navbar navbar-fixed-left leftNavContainer">
+<!--<nav class="navbar navbar-fixed-left leftNavContainer">
   <ul class="nav navbar-nav leftNavBGColor">
 
     <li *ngFor="let menu of menuList">
       <a class="col-md-12 nopadding " routerLink="{{menu.link}}">
-        <!--<img class="center-block leftNavImages" src="../../../../app/assets/images/leftNav/{{menu.imgName}}.png"
-			/>-->
-        <span class="col-md-12 nopadding text-center leftTabNavName" >{{menu.name}}</span>
+        <img class="center-block leftNavImages" src="../../../../app/assets/images/leftNav/{{menu.imgName}}.png"
+			/>
+        <span class="col-md-12 nopadding text-center leftTabNavName">{{menu.name}}</span>
       </a>
     </li>
     <li class="notificationContainer">
@@ -25,4 +25,46 @@
     </li>
 
   </ul>
-</nav>
+</nav>-->
+
+
+
+<div class="navdiv">
+  <div class="container">
+    <div class="container-fluid">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-warning" (click)="signout()">Logout</button>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+              aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <!--<li *ngFor="let menu of menuList">
+                <a routerLink="{{menu.link}}">
+                        {{menu.name}}
+                </a>
+              </li>-->
+              <li class="active"><a href="#">Dashboard</a></li>
+              <li><a >Alerts & Reports  </a></li>
+              <li><a href="#">Lighting</a></li>
+              <li><a href="#">Pools</a></li>
+              <li><a href="#">Irrigation</a></li>
+              <li><a href="#">Devices</a></li>
+              <li><a href="#">Configuration</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
+
+      </nav>
+    </div>
+  </div>
+</div>
