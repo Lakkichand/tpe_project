@@ -1,0 +1,25 @@
+
+  <div class="hd-bar">
+    <h3>
+      <img [src]="monitorConst.MON_LOGO" alt="">
+      <span>{{monitorConst.MONT}}</span>
+    </h3>
+    <div class="filtering">
+      <select>
+        <option>Pool</option>
+      </select>
+      <select>
+        <option>Main Pool Chemical Levels</option>
+      </select>
+      <select>
+        <option>By Week</option>
+      </select>
+      <select>
+        <option>Line Chart</option>
+      </select>
+    </div>
+    <img [src]="monitorConst.REF_ICON" class="refresh" alt="" data-toggle="modal" data-target="#myModal">
+  </div>
+  <div id="chartContainer" class="chart-div">
+    <img [src]="monitorConst.CHART">
+  </div>

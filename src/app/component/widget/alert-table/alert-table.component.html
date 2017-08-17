@@ -1,0 +1,106 @@
+<div class="hd-bar">
+  <h3>
+    <img [src]="alertConst.MON_LOGO" alt="">
+    <span>{{alertConst.ALERT}}</span>
+  </h3>
+  <div class="alert-filter-div">
+    <span class="Critical">{{alertConst.CRITICAL}} (3)  <img [src]="alertConst.CRITICAL_ICON" alt=""></span>
+    <span class="Major">{{alertConst.MAJOR}} (1)  <img [src]="alertConst.CRITICAL_ICON" alt=""></span>
+    <span class="Minor">{{alertConst.MINOR}} (2)  <img [src]="alertConst.CRITICAL_ICON" alt=""></span>
+  </div>
+  <img [src]="alertConst.REF_ICON" class="refresh" alt="" data-toggle="modal" data-target="#myModal" style="padding-left:10px;">
+  <button type="button" class="btn-margin btn btn-warning btn-vaa">{{alertConst.VIEW_ALL}}</button>
+  <button type="button" class="btn-margin btn btn-warning btn-vsm">{{alertConst.VIEW_STIE}}</button>
+
+</div>
+<div id="style-3" class="data-table scrollbar">
+  <div class="force-overflow">
+    <table>
+      <thead>
+        <tr >
+          <th scope="col" *ngFor="let alert of alertthead">{{alert.name}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+
+        <tr>
+          <td data-label="Staus">Active</td>
+          <td data-label="Level">Major (6) </td>
+          <td data-label="Alert">Temperature High</td>
+          <td data-label="Logged">Pool</td>
+          <td data-label="Zone">Light zone one/light 3993</td>
+          <td data-label="Description">Temperature above Threshold</td>
+          <td data-label="Reported">10:30AM July 27, 2017</td>
+          <td data-label="Resolved">10:30AM July 27, 2017</td>
+          <td data-label="Acition">Resolve</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
