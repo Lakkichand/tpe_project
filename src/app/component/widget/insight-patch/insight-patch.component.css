@@ -1,4 +1,4 @@
-.nopadding{
+/*.nopadding{
 	padding: 0px;
 }
 
@@ -23,5 +23,519 @@
 .insightValue{
     font-size: 30px;
     text-align: center!important;
-}
+}*/
 
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+			-moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			-webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			-moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			-o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+			transition: width 1s ease-in-out, left 1.5s ease-in-out;
+		}
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        padding: 0px;
+    }
+}
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    border-top: 3px solid #fcbd14;
+    padding: 10px 0px;
+}
+header ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.col-sm-9 {
+    float: right;
+    padding: 0px;
+}
+.col-sm-3 {
+    width: 21.333333333%;
+}
+.col-xs-2,
+.col-sm-3 {
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+}
+.top-information {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+}
+.top-information .map {
+    font-weight: bold;
+    display: block;
+}
+.top-information img {
+    float: left;
+    padding-right: 8px;
+}
+.box-border {
+    border-right: 1px solid #c1c1c1;
+    padding: 13px;
+    text-align: left
+}
+.top-information .address {
+    font-size: 12px;
+}
+.Cloudy {
+    width: 17.33333333%
+}
+.userinfo {
+    /*width: 18.8888888%*/
+    
+    border: 0px;
+}
+.userinfoimg {
+    float: right !important;
+    padding-left: 10px;
+    margin-top: -5px;
+}
+.navdiv {
+    background: #0093d8
+}
+.navbar-header {} .btn-warning {
+    color: #fff;
+    background-color: #febe10;
+    border-color: #febe10;
+}
+.btn {
+    border-radius: 3px;
+    border: 0px;
+    padding: 5px 10px;
+}
+.navbar-default .btn-warning {
+    float: right;
+    margin: 9px 0px 0px 0px
+}
+.navbar {
+    margin: 0px
+}
+.navbar-default {
+    border: 0px;
+    background-color: transparent;
+}
+.navbar-nav > li > a {} .navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 17px;
+    border-right: 1px solid #6fc3ea;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    padding: 0px;
+}
+/*body content*/
+
+.body-content {
+    background: #f0f1f6;
+    padding: 15px 0px;
+}
+.tile-style {
+    background: #fff;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid #d5d6db;
+    margin-right: 15px;
+    transition: background-color 0.5s ease;
+}
+.tile-style:hover {
+    border: 1px solid #d5d6db;
+}
+.remove-margin {
+    margin: 0px;
+}
+.col-sm-4 {
+    width: 32.33333333%;
+}
+.card-body {} .hd-bar {
+    border-bottom: 1px solid #e9e9eb;
+    min-height: 40px;
+}
+.hd-bar h3 {
+    margin: 0px;
+    color: #202020;
+    font-size: 18px;
+}
+.hd-bar h3 span {
+    display: block;
+    float: left;
+    padding: 6px 0px 0px 0px;
+}
+.hd-bar h3 .headding {
+    float: left;
+    color: #5d5d5d;
+    font-size: 14px;
+    padding: 7px 20px;
+}
+.refresh {
+    float: right;
+    padding-top: 8px;
+    cursor: pointer;
+}
+.btn-info {
+    color: #fff;
+    background-color: transparent;
+    border-color: #46b8da;
+}
+.btn-info:hover {
+    background-color: transparent;
+    border-color: #46b8da;
+}
+.hd-bar h3 img {
+    float: left;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+}
+.card-body .inner-tile {
+    margin: 7px 30px;
+    clear: both;
+}
+.card-body .inner-tile .last-updated {
+    border-bottom: 1px solid #e9e9eb;
+    font-size: 12px;
+    color: #5d5d5d;
+    padding-bottom: 4px;
+}
+.card-body .inner-tile ul {
+    margin: 0px;
+    padding: 0px;
+}
+.card-body .inner-tile ul li {
+    margin: 0px 20px 0px 0px;
+    width: 142px;
+    padding: 0px;
+    list-style: none;
+    float: left
+}
+.card-body .inner-tile ul li h4 {
+    color: #0093d8;
+    font-size: 15px;
+    border-bottom: 1px solid #e9e9eb;
+    padding: 5px 0px;
+    margin: 0px 0px 5px 0px;
+}
+.card-body .inner-tile ul li .units {
+    font-weight: bold;
+    font-size: 13px;
+}
+.card-body .inner-tile ul li p {
+    line-height: 22px;
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+}
+.more-info {
+    margin: -20px 0px 0px 0px;
+    padding: 0px 0px 5px 0px;
+    text-align: right;
+    clear: both;
+    display: block;
+    float: right;
+}
+.selectbox {
+    border: 0px !important;
+    margin-right: -29px;
+    float: right;
+}
+.poolinfo ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.poolinfo ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: 1px solid #e9e9eb;
+    width: 100%!important;
+    padding-bottom: 5px !important;
+}
+.poolinfo ul li .info {
+    color: #5d5d5d;
+    display: block;
+    float: left;
+    width: 47%;
+}
+.poolinfo ul li .needed {
+    color: #000;
+    display: block;
+    float: left;
+}
+.col-sm-8 {
+    width: 65.866667%;
+}
+.reports-div {
+    width: 32.433333%;
+    margin: 0;
+    float: right;
+    margin-right: 5px;
+}
+.force-overflow-new {
+    padding: 8px 0px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 13px;
+    color: #202020;
+}
+.force-overflow-new p {
+    margin: 0px;
+    padding: 0px 10px 5px 10px;
+    line-height: 21px;
+}
+.force-overflow-new p img {
+    float: right;
+    padding-top: 3px;
+}
+.force-overflow-new p span {
+    color: #00bd31;
+}
+.donut-chart-div {
+    padding: 15px 10px;
+    border-bottom: 1px solid #e2e2e2;
+    min-height: 115px;
+}
+.d-chart {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.chart-text {
+    float: left;
+    width: 255px;
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+}
+.chart-text ul {
+    margin: 0px;
+    padding: 0px;
+}
+.chart-text ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: 1px solid #e9e9eb;
+    line-height: 40px;
+}
+.chart-text ul li .active {
+    color: red;
+}
+.chart-text ul li .resolved {
+    color: #1a9c00;
+}
+.reported-issues {
+    float: left;
+    height: 416px;
+    background: #fff;
+    overflow-y: scroll;
+}
+.filtering {
+    float: left;
+    padding: 4px 0px 0px 24%;
+}
+select {
+    border: 1px solid #d7d7d9;
+    color: gray;
+    margin-right: 7px;
+    font-size: 12px;
+    padding: 3px;
+}
+.btn-margin {
+    float: right;
+    margin: 1px 0px 0px 0px
+}
+.chart-div {
+    width: 100%;
+    height: 230px;
+}
+.alert-div {
+    padding: 15px 0px;
+}
+.alert-filter-div {
+    float: left;
+    font-size: 12px;
+    padding: 9px 0px 0px 8%;
+}
+.alert-filter-div .Critical,
+.Major,
+.Minor {
+    display: block;
+    float: left;
+    color: #bc0c0c;
+    border-right: 1px solid #d5d6db;
+    margin-right: 20px;
+}
+.alert-filter-div img {
+    margin: -2px 0px 0px 0px;
+    padding: 0px 15px 0px 5px;
+}
+.alert-filter-div .Major {
+    color: #e1610b;
+}
+.alert-filter-div .Minor {
+    color: #e8ae10;
+    border-right: 0px solid #d5d6db;
+}
+.btn-vsm {
+    float: right;
+    margin-right: 10px;
+    background: #b5b5b5;
+}
+.btn-vsm:hover {
+    background: #d0cece;
+}
+.btn-vaa {
+    float: right;
+}
+.data-table {
+    width: 100%;
+    height: 230px;
+}
+table {
+    border: 0px solid #ccc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+table tr {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+}
+table th {
+    padding: 12px .625em;
+    text-align: left;
+}
+table td {
+    padding: 12px .625em;
+    text-align: left;
+    font-size: 12px;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: none;
+    color: #0093d8;
+}
+@media (max-width: 767px) {
+    body{
+        display: none;
+    }
+}
+/*@media (max-width: 1300px) {
+    body{
+        zoom:80%
+    }
+}*/
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    table td:before {
+        /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+        
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+/*
+ *  STYLE 3
+ */
+
+.scrollbar {
+    float: left;
+    height: 230px;
+    background: #fff;
+    overflow-y: scroll;
+}
+#style-3::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+#style-3::-webkit-scrollbar {
+    width: 6px;
+    background-color: #fff;
+}
+#style-3::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}
+footer {
+    background: #012f60;
+    padding: 8px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+.modal-dialog {
+    width: 300px;
+    margin: 30px auto;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}

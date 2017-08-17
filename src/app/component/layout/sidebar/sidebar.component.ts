@@ -30,6 +30,7 @@ export class SidebarComponent {
       count: 5
     }];
 
+
     this.siteMangerList = [{
       name: 'Dashboard',
       tabName: 'Dashboard',
@@ -37,7 +38,7 @@ export class SidebarComponent {
       link: '/'
     }, {
       name: 'Notification',
-      tabName: 'Notification',
+      tabName: 'Alerts & Reports',
       imgName: 'icon_notification',
       count: 5
     }, {
@@ -54,9 +55,9 @@ export class SidebarComponent {
       tabName: 'Irrigation',
       imgName: 'icon_irrigation'
     }, {
-      name: 'History',
-      tabName: 'History',
-      imgName: 'icon_history'
+      name: 'Devices',
+      tabName: 'Devices',
+      imgName: 'icon_devices'
     }, {
       name: 'Configuration',
       tabName: 'Configuration',

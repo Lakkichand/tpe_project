@@ -45,6 +45,8 @@ import { LightingComponent } from './component/lighting/lighting.component';
 import { LightInsightpatchComponent } from './component/widget/light-insightpatch/light-insightpatch.component';
 import { ModalboxComponent } from './component/shared/modalbox/modalbox.component';
 import { ModaldialogComponent } from './component/shared/modaldialog/modaldialog.component';
+import { MonitoringComponent } from './component/widget/monitoring/monitoring.component';
+import { AlertTableComponent } from './component/widget/alert-table/alert-table.component';
 
 
 
@@ -68,7 +70,9 @@ import { ModaldialogComponent } from './component/shared/modaldialog/modaldialog
     LightingComponent,
     LightInsightpatchComponent,
     ModalboxComponent,
-    ModaldialogComponent
+    ModaldialogComponent,
+    MonitoringComponent,
+    AlertTableComponent
   ],
   imports: [
     BrowserModule,

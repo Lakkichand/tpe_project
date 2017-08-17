@@ -1,19 +1,155 @@
-<section class=" col-md-12 col-sm-12 nopadding">
+<!--Light-->
+{{insightData.LAST_MNTH}}
+<div *ngIf="insightData.id=='lights'" class="card-body">
+    <div class="hd-bar">
+        <h3>
+            <img [src]="insightConst.LIGHT_LOGO">
+            <span>{{insightConst.LIGHT_HEADING}}</span>
+            <span class="headding">{{insightData.lights_istalled}} {{insightConst.LIGHTS_IND}}</span>
+        </h3>
+        <img [src]="insightConst.REF_ICON" class="refresh" alt="" data-toggle="modal" data-target="#myModal">
+    </div>
+    <div class="inner-tile">
+        <div class="last-updated">
+            {{insightConst.LAST_UPDT}}: {{insightData.last_updated | date:'hh:mm a' }} | {{ insightData.last_updated | date:'MMMM d,
+            y' }}
+        </div>
 
-  <article class="col-md-12 col-sm-12 patch-detail-container">
-    <p class="col-md-12 col-sm-12 patch-heading ">{{insightData.insightHeading}}</p>
-    <article class="patch_value col-md-12 nopadding">
-      <article class="col-md-6 nopadding">
-        <span class="col-md-12 insightValue text-center">{{insightData.insightValue}}</span>
-        <span class="col-md-12 insightUnit text-center">{{insightData.insightUnit}}</span>
-      </article>
-      <article class="col-md-6 nopadding">
-        <span class="col-md-12 insightInfo text-center">{{insightData.insightInfo_1}}</span>
-        <span class="col-md-12 insightInfo text-center">{{insightData.insightInfo_2}}</span>
-      </article>
-    </article>
+        <ul>
+            <li>
+                <h4>
+                    {{insightConst.CURR_MNTH}}
+                </h4>
+                <p>
+                    <span>{{insightConst.TOD}}</span>
+                    <br>
+                    <span class="units">{{insightData.current_month.total_to_date_value}}{{insightData.powerUnit}} &nbsp;| &nbsp;${{insightData.current_month.total_to_date_amt}}</span>
+                </p>
+                <p style="padding:0px">
+                    <span>{{insightConst.APD}}</span>
+                    <br>
+                    <span class="units">{{insightData.current_month.avg_per_day_value}}{{insightData.powerUnit}} &nbsp;| &nbsp;${{insightData.current_month.avg_per_day_amt}}</span>
+                </p>
+            </li>
+            <li style="margin:0px">
+                <h4>
+                    {{insightConst.LAST_MNTH}}
+                </h4>
+                <p>
+                    <span> {{insightConst.TOM}}</span>
+                    <br>
+                    <span class="units">{{insightData.last_month.total_to_month_value}}{{insightData.powerUnit}} &nbsp;| &nbsp;${{insightData.last_month.total_to_month_amt}}</span>
+                </p>
+                <p style="padding:0px">
+                    <span>{{insightConst.APD}}</span>
+                    <br>
+                    <span class="units">{{insightData.last_month.avg_per_month_value}}{{insightData.powerUnit}} &nbsp;| &nbsp;${{insightData.last_month.avg_per_month_amt}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <p class="more-info">
+        <img [src]="insightConst.MORE_ICON">
+    </p>
+</div>
 
-  </article>
-</section>
 
+<!--pool-->
 
+<div *ngIf="insightData.id=='pool'" class="card-body">
+    <div class="hd-bar">
+        <h3>
+            <img [src]="insightConst.POOL_LOGO">
+            <span>{{insightConst.POOL_HEADING}}</span>
+            <span class="headding">{{insightConst.POOL_OW}}</span>
+        </h3>
+        <img [src]="insightConst.REF_ICON" class="refresh" alt="" data-toggle="modal" data-target="#myModal">
+    </div>
+    <div class="inner-tile">
+        <div class="selectbox last-updated">
+            <!--<select[(ngModel)]="selectedPool" (ngModelChange)="updatePool($event)">
+                    <option [ngValue]="pool" *ngFor="let pool of pool_list">{{pool.value}}</option>
+            </select>-->
+
+            <select>
+                 <option>Main Pool</option>
+                 <option>Main Pool</option>
+            </select>
+        </div>
+        <div class="poolinfo" style="margin:-1px 0px 0px 0px">
+            <ul>
+                <li style="margin-top:-8px;">
+                    <span class="info">{{insightConst.STATUS}}</span><span class="needed">{{insightData.status}}</span>
+                </li>
+                <li>
+                    <span class="info">{{insightConst.CHEM_LVL}}</span><span class="needed">{{insightData.temp}}</span>
+                </li>
+                <li>
+                    <span class="info">{{insightConst.TEMP}}</span><span class="needed">{{insightData.chem_level}}</span>
+                </li>
+                <li>
+                    <span class="info">{{insightConst.MAN_CLSD}}</span><span class="needed"><a href="#">{{insightData.man_closed}}</a></span>
+                </li>
+                <li style="padding:0px;">
+                    <span class="info">{{insightConst.LAST_REP}}</span><span class="needed">{{insightData.last_Reported | date:'hh:mm a' }} | {{ insightData.last_Reported | date:'MMMM d, y' }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="more-info">
+        <img [src]="insightConst.MORE_ICON">
+    </p>
+</div>
+
+<!--irrigation-->
+<div *ngIf="insightData.id=='irrigation'" class="card-body">
+    <div class="hd-bar">
+        <h3>
+            <img [src]="insightConst.IRRIGATION_LOGO">
+            <span>{{insightConst.IRRIGATION_HEADING}}</span>
+            <span class="headding">8 {{insightConst.IRRIGATION_MON}}</span>
+        </h3>
+        <img [src]="insightConst.REF_ICON" class="refresh" alt="" data-toggle="modal" data-target="#myModal">
+    </div>
+    <div class="inner-tile">
+        <div class="last-updated">
+            {{insightConst.LAST_UPDT}}: {{insightData.last_updated | date:'hh:mm a' }} | {{ insightData.last_updated | date:'MMMM d,
+            y' }}
+        </div>
+        <ul>
+            <li>
+                <h4>
+                    {{insightConst.CURR_MNTH}}
+                </h4>
+                <p>
+                    <span>{{insightConst.TOD}}</span>
+                    <br>
+                    <span class="units">30.04(gal) &nbsp;| &nbsp;$231</span>
+                </p>
+                <p style="padding:0px">
+                    <span>{{insightConst.APD}}</span>
+                    <br>
+                    <span class="units">30.04(gal) &nbsp;| &nbsp;$231</span>
+                </p>
+            </li>
+            <li style="margin:0px">
+                <h4>
+                    {{insightConst.LAST_MNTH}}
+                </h4>
+                <p>
+                    <span>{{insightConst.TOM}}</span>
+                    <br>
+                    <span class="units">30.04(gal) &nbsp;| &nbsp;$231</span>
+                </p>
+                <p style="padding:0px">
+                    <span>{{insightConst.APD}}</span>
+                    <br>
+                    <span class="units">30.04(gal) &nbsp;| &nbsp;$231</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <p class="more-info">
+        <img [src]="insightConst.MORE_ICON">
+    </p>
+</div>

@@ -3,7 +3,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class DashboardComponent implements OnInit {
 
@@ -11,36 +11,123 @@ export class DashboardComponent implements OnInit {
   reportData: any[] = [];
   selectedPoolMontior: any;
   pools: any[] = [];
+  loadTime: any;
+  tableHeader: any[]=[];
+  alertTableData: any[]=[];
 
   constructor() {
-    this.loadInsightData();
+    this.getTime();
     this.getMonitorPools();
+    this.loadInsightData();
     this.loadReportData();
+    this.loadAlert();
+
   }
 
   ngOnInit() {
 
   }
 
+
+  loadAlert()
+  {
+    this.tableHeader = [ {
+			name : 'Status',
+			id : 'status',
+			type : 'string',
+			color : 'black'
+		}, {
+			name : 'Level',
+			id : 'level',
+			type : 'string',
+			color : 'blue'
+		}, {
+			name : 'Alert Type',
+			id : 'type',
+			type : 'string',
+			color : 'black'
+		}, {
+			name : 'Logged',
+			id : 'logged',
+			type : 'string',
+			color : 'black'
+		}, {
+			name : 'Zone/Device',
+			id : 'device',
+			type : 'string',
+			color : 'black'
+		}, {
+			name : 'Description',
+			id : 'desc',
+			type : 'string',
+			color : 'black'
+		}, {
+			name : 'Reported',
+			id : 'reported',
+			type : 'string',
+			color : 'black'
+		}, {
+			name : 'Resolved',
+			id : 'resolved',
+			type : 'string',
+			color : 'blue'
+		}, {
+			name : 'Action',
+			id : 'action',
+			type : 'string',
+			color : 'black'
+		} ];
+
+
+    this.alertTableData=[];
+  }
+
+  getTime() {
+    this.loadTime = new Date();
+  }
+
   loadInsightData() {
     this.insightArray = [{
-      insightHeading: 'Lights',
-      insightValue: '17:44',
-      insightUnit: 'kWh',
-      insightInfo_1: 'peak in past 24hrs ',
-      insightInfo_2: 'peak time 06:30'
+      id: 'lights',
+      lights_istalled: '65',
+      current_month: {
+        total_to_date_value: '56:44',
+        total_to_date_amt: '231',
+        avg_per_day_value: '30.04',
+        avg_per_day_amt: '133',
+      },
+      last_month: {
+        total_to_month_value: '56:44',
+        total_to_month_amt: '231',
+        avg_per_month_value: '30.04',
+        avg_per_month_amt: '133',
+      },
+      last_updated: this.loadTime,
+      powerUnit: 'kWh',
     }, {
-      insightHeading: 'Pool',
-      insightValue: 'Open',
-      insightUnit: 'levels acceptable',
-      insightInfo_1: 'next manual test ',
-      insightInfo_2: 'scheduled 09:45'
+      id: 'pool',
+      status: 'Open',
+      temp: 'Outside Threshold',
+      chem_level: 'Acceptable',
+      man_closed: 'No ',
+      last_Reported: this.loadTime,
+      pool_list: this.pools
     }, {
-      insightHeading: 'Irrigation',
-      insightValue: '4544',
-      insightUnit: 'gallons (avg per week)',
-      insightInfo_1: '10000sqft of lawn',
-      insightInfo_2: 'avg weekly cost $39'
+      id: 'irrigation',
+      current_month: {
+        total_to_date_value: '56:44',
+        total_to_date_amt: '231',
+        avg_per_day_value: '30.04',
+        avg_per_day_amt: '133',
+      },
+      last_month: {
+        total_to_month_value: '56:44',
+        total_to_month_amt: '231',
+        avg_per_month_value: '30.04',
+        avg_per_month_amt: '133',
+      },
+      last_updated: this.loadTime,
+      powerUnit: 'gals',
 
     }]
   }
@@ -48,24 +135,24 @@ export class DashboardComponent implements OnInit {
   loadReportData() {
     this.reportData = [{
       time: '4 December 22:11',
-      topic: 'BBQ area light flickering',
-      reporter: 'Lucy Stephenson (Appt 48)',
-      assets: 'View'
+      type: 'Light above Jess (blue top) was flickering on and off. Very annoying and definitely something not right for sure.',
+      reporter: 'Lucy Stephenson',
+      status: 'Resolved'
     }, {
       time: '3 December 8:43',
-      topic: 'A lot of leaves in the pool area this morning',
-      reporter: 'Stan Webber (Appt 32A)',
-      assets: 'None'
+      type: 'Light above Jess (blue top) was flickering on and off. Very annoying and definitely something not right for sure.',
+      reporter: 'Stan Webber ',
+      status: 'Resolved'
     }, {
       time: '3 December 22:53',
-      topic: 'Broken glass discovered in the parking lot.',
-      reporter: 'Lucy Stephenson (Appt 48)',
-      assets: 'View'
+      type: 'Light above Jess (blue top) was flickering on and off. Very annoying and definitely something not right for sure.',
+      reporter: 'Lucy Stephenson ',
+      status: 'Resolved'
     }, {
       time: '1 December 23:56',
-      topic: 'Daily pool report auto-generated. Now available in reports',
-      reporter: 'System Report',
-      assets: 'View'
+      type: 'Light above Jess (blue top) was flickering on and off. Very annoying and definitely something not right for sure.',
+      reporter: 'Lucy Stephenson',
+      status: 'Resolved'
     }]
 
   }
@@ -75,7 +162,7 @@ export class DashboardComponent implements OnInit {
       { id: 0, key: 'Pool', value: 'Main Pool Chemical Level' },
       { id: 1, key: 'Light', value: 'Main Light Power consumption' },
       { id: 2, key: 'irrigation', value: 'Water consumption' }
-      
+
     ];
 
 

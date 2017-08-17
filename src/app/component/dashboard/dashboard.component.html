@@ -1,4 +1,4 @@
-<section class="col-md-12 col-xs-12 dashboard-widget-container nopadding ">
+<!--<section class="col-md-12 col-xs-12 dashboard-widget-container nopadding ">
 
   <article class="col-md-12 patch-container">
     <section class="col-md-4 patch-div">
@@ -45,4 +45,52 @@
     </section>
   </article>
 
-</section>
+</section>-->
+
+
+<!--changes-->
+
+ <div class="body-content">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 tile-style">
+                         <app-insight-patch [insightData]="insightArray[0]"></app-insight-patch>
+                    </div>
+                    <!--/lights ends-->
+                    <div class="col-sm-4 tile-style">
+                        <app-insight-patch [insightData]="insightArray[1]" ></app-insight-patch>
+                    </div>
+                    <!--/Pool ends-->
+                    <div class="col-sm-4 tile-style remove-margin">
+                         <app-insight-patch [insightData]="insightArray[2]"></app-insight-patch>
+                    </div>
+                    <!--/Irrigation ends-->
+                </div>
+                <!--/.top tiles -->
+                <div class="row" style="padding-top:16px">
+                    <div class="col-sm-8 tile-style" style="margin-bottom:15px;">
+                         <app-monitoring></app-monitoring>
+                    </div>
+                   
+                    <!--/Monitoring Div-->
+                    <div class="col-sm-4 tile-style reports-div">
+                        <app-log-reports [reportData]="reportData"></app-log-reports>
+                    </div>
+                    <!--/Reports Div-->
+                    <div class="col-sm-8 tile-style">
+                        <app-alert-table [alertthead]="tableHeader"></app-alert-table>
+                        
+                    </div>
+                    <!--/Alerts Div-->
+
+                </div>
+                <!--/chart and reports div -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+

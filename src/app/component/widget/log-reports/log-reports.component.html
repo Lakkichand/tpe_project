@@ -1,4 +1,4 @@
-<section class="reportDetail-widget" >
+<!--<section class="reportDetail-widget" >
 	<p class="col-md-12 col-sm-12 col-xs-12 headerText reportdata-heading">Reports & logs</p>
 	
 	<article *ngFor="let report of reportData" class="col-md-12 col-sm-12 col-xs-12  reportsDetails">
@@ -14,4 +14,32 @@
     </article>
   </article>
 </section> 
+-->
 
+<div class="hd-bar">
+  <h3>
+    <img [src]="reportConst.REP_ICON" alt="">
+    <span>{{reportConst.REPORT}}</span>
+  </h3>
+  <img [src]="reportConst.REF_ICON" class="refresh" style="padding-left:10px;" alt="" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn-margin btn btn-warning">{{reportConst.VIEW_MORE}}</button>
+
+</div>
+<div class="donut-chart-div">
+  <div class="d-chart"><img [src]="reportConst.PIE_CHART" alt=""></div>
+  <div class="chart-text">
+    <ul>
+      <li>&nbsp;&nbsp;&nbsp; Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="active">51%</span></li>
+      <li style="border:0px;">&nbsp;&nbsp;&nbsp; Resolved &nbsp;&nbsp;&nbsp;&nbsp;<span class="resolved">49%</span></li>
+    </ul>
+  </div>
+</div>
+<div id="style-3" class="reported-issues">
+  <div class="force-overflow-new " *ngFor="let report of reportData">
+    <p><strong>{{reportConst.REPORTED}}:</strong> {{report.time}}</p>
+    <p><strong>{{reportConst.TYPE}}:</strong> {{report.type}}</p>
+    <p><strong>{{reportConst.STATUS}}:</strong> <span>{{report.status}}</span></p>
+    <p style="padding-bottom:3px;"><strong>{{reportConst.REPORTED_BY}}:</strong> <a href="#">{{report.reporter}}</a><img src="img/more-icon.png" alt=""></p>
+  </div>
+
+</div>

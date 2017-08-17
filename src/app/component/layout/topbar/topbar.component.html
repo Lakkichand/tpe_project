@@ -13,28 +13,28 @@
                         <div class="col-sm-3 box-border">
                             <img [src]="topbarConst.MAP_ICON" />
                             <span class="map">
-                           Cedar Falls Complex
+                            {{locationData.name}}
                            </span>
                             <span class="address">
-                           Santa Clara, CA 95054
+                          {{locationData.area}}, {{locationData.country}} {{locationData.pincode}}
                            </span>
                         </div>
                         <div class="col-sm-3 box-border Cloudy">
                             <img [src]="topbarConst.CLOUD_ICON" />
                             <span class="map">
-                           65 F
+                           {{temp}} F
                            </span>
                             <span class="address">
-                           Partly Cloudy
+                          {{temp_condtion }} 
                            </span>
                         </div>
                         <div class="col-sm-3 box-border Cloudy">
                             <img [src]="topbarConst.CAL_ICON" />
                             <span class="map">
-                           06:30 AM
+                           {{ whatTime | async | date:'hh:mm a' }}
                            </span>
                             <span class="address">
-                           August 11, 2017
+                          {{ whatTime | async | date:'MMMM d, y' }}
                            </span>
                         </div>
                         <div class="col-sm-3 box-border userinfo dropdown">
@@ -46,8 +46,7 @@
                            Site Manager
                            </span>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <img src="img/dropdown-icon.png"  alt="">
-                                 <img [src]="topbarConst.DOWN_ICON" class="userinfoimg" />
+                                   <img [src]="topbarConst.DOWN_ICON" class="userinfoimg" />
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">User Setting</a></li>

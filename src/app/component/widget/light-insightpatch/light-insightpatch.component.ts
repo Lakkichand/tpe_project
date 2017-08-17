@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { LightingInsightConstant } from './light-insightpatch.contant';
+import { LightingInsightConstant } from './light-insightpatch.constant';
 import { ModalboxComponent } from '../../shared/modalbox/modalbox.component';
 
 @Component({
