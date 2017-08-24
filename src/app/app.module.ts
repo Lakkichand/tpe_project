@@ -47,6 +47,11 @@ import { ModalboxComponent } from './component/shared/modalbox/modalbox.componen
 import { ModaldialogComponent } from './component/shared/modaldialog/modaldialog.component';
 import { MonitoringComponent } from './component/widget/monitoring/monitoring.component';
 import { AlertTableComponent } from './component/widget/alert-table/alert-table.component';
+import { NotificationComponent } from './component/notification/notification.component';
+import { PoolsComponent } from './component/pools/pools.component';
+import { IrrigationComponent } from './component/irrigation/irrigation.component';
+import { DevicesComponent } from './component/devices/devices.component';
+import { ConfigurationComponent } from './component/configuration/configuration.component';
 
 
 
@@ -72,7 +77,12 @@ import { AlertTableComponent } from './component/widget/alert-table/alert-table.
     ModalboxComponent,
     ModaldialogComponent,
     MonitoringComponent,
-    AlertTableComponent
+    AlertTableComponent,
+    NotificationComponent,
+    PoolsComponent,
+    IrrigationComponent,
+    DevicesComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
